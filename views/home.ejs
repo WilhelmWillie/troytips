@@ -1,0 +1,44 @@
+<!doctype html>
+
+<html>
+  <head>
+    <title>Troy Tips</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="./stylesheet.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Troy Tips</h1>
+
+      <hr/>
+
+      <form method="POST" action="/tip/new">
+        <textarea class="text-input content-input" placeholder="What tip do you have?" name="content"></textarea>
+        <input type="text" placeholder="Your Name" class="text-input name-input" name="author"/>
+
+        <div class="submit-input">
+          <input type="submit" class="submit-btn"/>
+        </div>
+      </form>
+
+      <hr/>
+
+      <div class="tips">
+        <% for(var i = 0; i < tips.length; i++) { %>
+        <div class="tip">
+          <p class="content"><%= tips[i].content %></p>
+
+          <p class="details">
+            <b>
+              - <%= tips[i].author %><br/>
+            </b>
+          </p>
+        </div>
+        <% } %>
+      </div>
+    </div>
+  </body>
+</html>

@@ -2,62 +2,59 @@
 
 <html>
   <head>
-    <title>TroyTips</title>
+    <title>Troy Tips</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="./stylesheet.css" />
   </head>
 
   <body>
     <div class="container">
-      <h1>TroyTips</h1>
+      <h1>Troy Tips</h1>
+
+      <hr/>
 
       <form>
-        <textarea class="text">Write name here</textarea>
-        <input type="text" placeholder="Your Name" class="name"/>
+        <textarea class="text-input content-input" placeholder="What tip do you have?"></textarea>
+        <input type="text" placeholder="Your Name" class="text-input name-input"/>
 
-        <select>
-          <option value="food">Food</option>
-          <option value="housing">Housing</option>
-          <option value="classes">Classes</option>
-          <option value="clubs">Clubs</option>
-          <option value="greekLife">Greek Life</option>
-          <option value="social">Social</option>
-        </select>
-
-        <input type="submit" />
+        <div class="submit-input">
+          <input type="submit" class="submit-btn"/>
+        </div>
       </form>
+
+      <hr/>
 
       <div class="tips">
         <div class="tip">
-          <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+          <p class="content">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
 
-          <hr/>
-
-          <p><b>Wilhelm Willie</b></p>
+          <p class="details">
+            <b>
+              - Wilhelm Willie<br/>
+            </b>
+          </p>
         </div>
 
         <div class="tip">
-          <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+          <p class="content">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
 
-          <hr/>
-
-          <p><b>Wilhelm Willie</b></p>
+          <p class="details">
+            <b>
+              - Wilhelm Willie
+            </b>
+          </p>
         </div>
 
         <div class="tip">
-          <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+          <p class="content">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
 
-          <hr/>
-
-          <p><b>Wilhelm Willie</b></p>
-        </div>
-
-        <div class="tip">
-          <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
-
-          <hr/>
-
-          <p><b>Wilhelm Willie</b></p>
+          <p class="details">
+            <b>
+              - Wilhelm Willie
+            </b>
+          </p>
         </div>
       </div>
     </div>

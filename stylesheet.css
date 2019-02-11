@@ -1,43 +1,87 @@
 body {
-  font-family: sans-serif;
-  background-color: #4A0808;
+  font-family: 'Lato', Helvetica, Arial, sans-serif;
+  background-color: #AB1313;
+  color: #464646;
 }
 
 .container {
   width: 420px;
-  margin: 0 auto;
+  padding: 48px 24px;
+  margin: 48px auto;
+  background: #F3F3F3;
+  border-radius: 4px;
 }
 
 h1 {
-  color: #E1DB22;
+  font-size: 48px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0 0 24px;
+  color: #1C1C1C;
 }
 
-.text {
+hr {
+  height: 2px;
+  color: #D7B700;
+  background-color: #D7B700;
+  border: none;
+  width: 170px;
+}
+
+p {
+  font-weight: 300;
+  margin: 0;
+  line-height: 18px;
+}
+
+form {
+  padding: 24px 0;
+}
+
+.text-input {
+  border: 1px solid #E2E2E2;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  font-size: 14px;
+  color: #464646;
+  font-weight: 300;
   width: 100%;
-  border: 1px solid #E2E2E2;
-  height: 100px;
-  padding: 10px;
-  box-sizing: border-box;
-  border-radius: 5px;
-  resize: none;
-  font-size: 14px;
-  color: #252525;
+  margin-bottom: 12px;
 }
 
-.name {
-  width: 200px;
-  border: 1px solid #E2E2E2;
-  padding: 10px;
-  box-sizing: border-box;
+.content-input {
+  height: 100px;
+}
+
+.submit-input {
+  text-align: right;
+}
+
+.submit-btn {
+  background-color: #D7B700;
+  padding: 10px 24px;
   border-radius: 5px;
+  border: none;
   font-size: 14px;
-  color: #252525;
+  color: #FFFFFF;
+}
+
+.submit-btn:hover {
+  background-color: #EDCA00;
 }
 
 .tip {
   border: 1px solid #E2E2E2;
-  padding: 10px;
+  padding: 14px;
   border-radius: 5px;
   background: #FFFFFF;
   margin-top: 20px;
+}
+
+.tip .details {
+  text-align: right;
+  margin-top: 14px;
+  color: #1C1C1C;
 }

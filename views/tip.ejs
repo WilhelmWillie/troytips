@@ -17,18 +17,17 @@
 
       <div class="tips">
         <div class="tip">
+          <p class="content"><%= tip.content %></p>
 
-            <p class="content"><%= tip.content %></p>
+          <p class="details">
+            <b>
+              - <%= tip.author %><br/>
+            </b>
 
-            <p class="details">
-              <b>
-                - <%= tip.author %><br/>
-              </b>
-
-              <a href="/tip/<%= tip._id %>" class="permalink">
-                <%= moment(tip.created).format('MMMM DD, hh:mm a') %>
-              </a>
-            </p>
+            <a href="/tip/<%= tip._id %>" class="permalink">
+              <%= moment(tip.created).format('MMMM DD, hh:mm a') %>
+            </a>
+          </p>
         </div>
       </div>
     </div>

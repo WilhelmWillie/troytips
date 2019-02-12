@@ -1,15 +1,8 @@
+/* CSS for TroyTips */
 body {
   font-family: 'Lato', Helvetica, Arial, sans-serif;
   background-color: #AB1313;
   color: #464646;
-}
-
-.container {
-  width: 420px;
-  padding: 48px 24px;
-  margin: 48px auto;
-  background: #F3F3F3;
-  border-radius: 4px;
 }
 
 h1 {
@@ -43,10 +36,22 @@ form {
   padding: 24px 0;
 }
 
+/* Container */
+.container {
+  width: 420px;
+  padding: 48px 24px;
+  margin: 48px auto;
+  background: #F3F3F3;
+  border-radius: 4px;
+}
+
+/* New Tip Form */
 .error {
   color: #A20808;
   font-weight: 700;
+  margin-top: 14px;
   margin-bottom: 12px;
+  text-align: center;
 }
 
 .text-input {
@@ -88,6 +93,7 @@ form {
   font-size: 20px;
 }
 
+/* Displaying the tips */
 .tip {
   border: 1px solid #E2E2E2;
   padding: 14px;

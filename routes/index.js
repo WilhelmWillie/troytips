@@ -6,10 +6,11 @@ const Tip = require('../models/Tip');
 const moment = require('moment');
 
 // Get all tips in the database
-// TODO: Error handling
 router.get('/', (req, res) => {
   Tip.find({}, null, {sort: {created: -1}}, function (err, tips) {
-    if (!err) {
+    if (err) {
+      res.render('error');
+    } else {
       res.render('home', {
         tips: tips,
         moment: moment,
@@ -24,14 +25,15 @@ router.get('/', (req, res) => {
 // View a single tip
 router.get('/tip/:id', (req, res) => {
   Tip.findById(req.params.id, function (err, tip) {
-    if (!err) {
-      // If tip can't be found or there's some weird error
+    if (err) {
+      // Display error page if we can't find Tip
+      res.render('error');
+    } else {
+      // Display Tip, pass moment a time format library
       res.render('tip', {
         tip: tip,
         moment: moment
       });
-    } else {
-      res.render('error');
     }
   });
 });

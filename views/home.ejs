@@ -36,22 +36,21 @@
 
       <div class="tips">
         <% for(var i = 0; i < tips.length; i++) { %>
-        <div class="tip">
-            <p class="content"><%= tips[i].content %></p>
+          <div class="tip">
+              <p class="content"><%= tips[i].content %></p>
 
-            <p class="details">
-              <b>
-                - <%= tips[i].author %>
-              </b>
+              <p class="details">
+                <b>
+                  - <%= tips[i].author %>
+                </b>
 
-              <br/>
+                <br/>
 
-              <a href="/tip/<%= tips[i]._id %>" class="permalink">
-                <%= moment(tips[i].created).format('MMMM DD, hh:mm a') %>
-              </a>
-            </p>
-
-        </div>
+                <a href="/tip/<%= tips[i]._id %>" class="permalink">
+                  <%= moment(tips[i].created).format('MMMM DD, hh:mm a') %>
+                </a>
+              </p>
+          </div>
         <% } %>
       </div>
     </div>

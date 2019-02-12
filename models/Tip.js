@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 
+// Define the Tip model
 const tipSchema = new mongoose.Schema({
   content: {
     type: String,

@@ -3,6 +3,15 @@ const path = require('path');
 
 const app = express();
 
+const session = require('express-session');
+const cookieParser = require('cookie-parser');
+const flash = require('connect-flash');
+
+// Set up session and cookies
+app.use(cookieParser('secret'));
+app.use(session({cookie: { maxAge: 60000 }}));
+app.use(flash());
+
 // Connect to database
 const mongoose = require('mongoose')
 mongoose.connect(process.env.DATABASE || 'mongodb://localhost/troytips')
@@ -13,34 +22,11 @@ app.set('view engine', 'ejs');
 
 app.use(express.urlencoded({ extended: false }));
 
-// Tip model
-const Tip = require('./models/Tip');
-
+// Set static library to be our public directory
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Get all tips in the database
-// TODO: Error handling
-app.get('/', (req, res) => {
-  Tip.find({}, null, {sort: {created: -1}}, function (err, tips) {
-    if (!err) {
-      res.render('home', {
-        tips: tips
-      });
-    }
-  });
-});
-
-// Create a new tip
-// TODO: Error handling
-app.post('/tip/new', (req, res) => {
-  var tip = new Tip({
-    content: req.body.content,
-    author: req.body.author
-  });
-
-  tip.save(function (err) {
-    res.redirect('/');
-  });
-});
+// Routing
+const indexRouter = require('./routes/index');
+app.use('/', indexRouter);
 
 app.listen(process.env.PORT || 3000, () => console.log('Launching our app on port 3000 🚀'));

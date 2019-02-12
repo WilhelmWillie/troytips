@@ -1,13 +1,13 @@
 const mongoose = require('mongoose');
 
-var tipSchema = new mongoose.Schema({
+const tipSchema = new mongoose.Schema({
   content: {
     type: String,
     required: true
   },
   author: {
     type: String,
-    default: 'Anonymous'
+    required: true
   },
   created: {
     type: Date,

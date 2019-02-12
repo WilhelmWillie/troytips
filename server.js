@@ -9,7 +9,13 @@ const flash = require('connect-flash');
 
 // Set up session and cookies
 app.use(cookieParser('secret'));
-app.use(session({cookie: { maxAge: 60000 }}));
+app.use(session({
+  cookie: { maxAge: 60000 },
+  resave: true,
+  saveUninitialized: true,
+  secret: 'fight on for old sc'
+}));
+
 app.use(flash());
 
 // Connect to database

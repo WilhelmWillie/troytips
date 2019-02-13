@@ -1,6 +1,6 @@
 # Troy Tips
 
-TroyTips is a project made for HackSC's Hack Nights. I'll be using this project
+Troy Tips is a project made for HackSC's Hack Nights. I'll be using this project
 to teach students the basics of web development.
 
 The idea is that this application will let users submit USC campus related tips
